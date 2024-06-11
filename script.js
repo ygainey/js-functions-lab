@@ -180,3 +180,96 @@ function basicCalculator(num1, num2, op){
 }
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+
+/*
+Exercise 10: calculateGrade()
+
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+function calculateGrade(score){
+    if (score >= 90){
+        return 'A';
+    }else if (score < 90 && score >= 80){
+        return 'B';
+    }else if(score < 80 && score >= 70){
+        return 'C';  
+    }else if(score < 70 && score >= 60){
+        return 'D';
+    }else if(score < 60){
+        return 'F';
+    }
+}
+
+console.log('Exercise 10 Result:', calculateGrade(85));
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre12'.
+
+Complete the exercise in the space below:
+*/
+/*
+function createUsername(fName, lName){
+    let x = ''
+    let y = ''
+    let z = fName.length + lName.length;
+    
+    let acc = [];
+
+    for(let i = 0; i < 3; i++){
+        acc.push(fName[i]);
+        x.join(fName[i]);
+        console.log(fName[i]);
+    }
+
+    for(let j = 0; j < 3; j++){
+        acc.push(lName[j]);
+        y.join(lName[j]);
+        console.log(lName[j]);
+    }
+    acc.join('');
+    console.log(acc)
+    z.toString()
+    console.log(z.toString())
+    
+    return x + y + z;
+}
+
+createUsername("Samantha", "Green");
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+
+let text = "Hello world!";
+let result = text.substring(1, 4);
+console.log(result)
+*/
+
+function createUsername(fName, lName){
+    let x = fName.substring(0 ,3);
+    let y = lName.substring(0, 3);
+    let z = fName.length + lName.length;
+
+    return x + y + z;
+
+}
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
