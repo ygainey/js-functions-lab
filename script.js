@@ -59,7 +59,7 @@ Complete the exercise in the space below:
 */
 
 function generateEmail(name, domain){
-    return name + domain;
+    return name + '@' + domain;
 }
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
